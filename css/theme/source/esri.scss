@@ -262,6 +262,55 @@ body {
   color: $linkColor;
 }
 
-pre {
-  tab-sizing: 1;
+/*********************************************
+ * CODE
+ *********************************************/
+
+.reveal pre code {
+  padding: 15px 36px;
+  background: #f1efee;
+  color: #68615e;
 }
+
+pre {
+  tab-size: 2;
+}
+
+/*********************************************
+ * BLOCK GROUPS
+ *********************************************/
+
+.block-group {
+  font-family: monospace;
+  letter-spacing: -.65em;
+  margin-left: -1em;
+  margin-right: -1em;
+  text-align: left;
+  display: block;
+  &.center {
+    text-align: center;
+  }
+}
+
+.block {
+  position: relative;
+  display: inline-block;
+  float: none;
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: $mainFont;
+  letter-spacing: normal;
+  text-align: left;
+  vertical-align: top;
+}
+
+@mixin _block-grid ($prefix: "") {
+  .#{$prefix}block-group-1-up .block { width: 100%; }
+  .#{$prefix}block-group-2-up .block { width: 50%; }
+  .#{$prefix}block-group-3-up .block { width: 33.33333%; }
+  .#{$prefix}block-group-4-up .block { width: 25%; }
+  .#{$prefix}block-group-5-up .block { width: 20%; }
+}
+
+@include _block-grid();
