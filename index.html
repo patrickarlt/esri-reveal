@@ -17,9 +17,13 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/esri.css" id="theme">
 
-		<link rel="stylesheet" href="plugin/leaflet/reveal-leaflet.css" id="theme">
-		<link rel="stylesheet" href="lib/leaflet-marker-cluster/MarkerCluster.css" id="theme">
-		<link rel="stylesheet" href="lib/leaflet-marker-cluster/MarkerCluster.Default.css" id="theme">
+		<link rel="stylesheet" href="plugin/leaflet/reveal-leaflet.css">
+		<link rel="stylesheet" href="lib/leaflet-marker-cluster/MarkerCluster.css">
+		<link rel="stylesheet" href="lib/leaflet-marker-cluster/MarkerCluster.Default.css">
+
+		<link rel="stylesheet" href="lib/esri-leaflet-geocoder/esri-leaflet-geocoder.css">
+
+		<link rel="stylesheet" href="lib/esri-leaflet-demographics/esri-leaflet-legend.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -64,11 +68,22 @@ alert("foo");
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
+
 		<script src="plugin/leaflet/leaflet.js"></script>
+
 		<script src="plugin/leaflet/reveal-leaflet.js"></script>
+
 		<script src="lib/leaflet-marker-cluster/leaflet.markercluster.js"></script>
+
 		<script src="lib/esri-leaflet/esri-leaflet.js"></script>
-		<script src="lib/esri-leaflet/clustered-feature-layer.js"></script>
+		<script src="lib/esri-leaflet/extras/clustered-feature-layer.js"></script>
+		<script src="lib/esri-leaflet/extras/heatmap-feature-layer.js"></script>
+
+		<script src="lib/esri-leaflet-geocoder/esri-leaflet-geocoder.js"></script>
+
+		<script src="lib/esri-leaflet-demographics/esri-leaflet-demographics.js"></script>
+
+		<script src="lib/leaflet-heat/leaflet-heat.js"></script>
 
 		<script>
 			// Full list of configuration options available here:
@@ -90,8 +105,8 @@ alert("foo");
 				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
-				parallaxBackgroundImage: '/background.jpg',
-				parallaxBackgroundSize: '2193px 1334px',
+				// parallaxBackgroundImage: '/background.jpg',
+				// parallaxBackgroundSize: '2193px 1334px',
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
